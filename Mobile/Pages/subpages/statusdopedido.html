@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://localhost/sitecasadinhoshouse/Desktop/styles/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>Página Inicial - Casadinhos House</title>
+    <style>
+        .btn-outline-secondary {
+          padding: 10px 20px;
+          font-size: 16px;
+        }
+
+        section {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+        }
+
+        .container {
+            width: 500px;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            padding: 12px 15px;
+            margin: 15px 0;
+            width: 100%;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+            outline: none;
+        }
+
+        input[type="text"]:focus {
+            border-color: #0070f3;
+        }
+
+        input[type="submit"] {
+            padding: 12px 0;
+            width: 100%;
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #dc3545;
+        }
+
+        .order-status {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            text-align: left;
+            padding: 10px;
+            border-radius: 8px;
+            display: none;
+        }
+
+        .status-step {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .status-step span {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: inline-block;
+            text-align: center;
+            line-height: 20px;
+            margin-right: 10px;
+            background-color: #28a745;
+            color: white;
+            font-weight: bold;
+        }
+
+        .status-step.pending span {
+            background-color: #ddd;
+        }
+
+        .status-step.error span {
+            background-color: #dc3545;
+        }
+
+        .status-step.pending p {
+            color: #999;
+        }
+
+        .status-step.error p {
+            color: #dc3545;
+            font-weight: bold;
+        }
+
+        .status-step p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+        <nav class="navbarslogan">
+            <span class="slogan">Aqui você encontra Alegria e conforto para o seu lar</span>
+        </nav>
+    
+        <div class="content">
+           <a href="index.html"><img src="https://i.ibb.co/hcd0M87/logo.png" class="logo" alt="Logo"></a> 
+            <ul class="nav">
+                <li class="nav-item"><a class="nav-link active" href="http://localhost/casadinhos/Desktop/categorias/sala/sala.html"><b>Sala</b></a></li>
+                <li class="nav-item"><a class="nav-link" href="http://localhost/casadinhos/Desktop/categorias/cozinha/cozinha.html"><b>Cozinha</b></a></li>
+                <li class="nav-item"><a class="nav-link" href="http://localhost/casadinhos/Desktop/categorias/quarto/quarto.html"><b>Quarto</b></a></li>
+                <li class="nav-item"><a class="nav-link" href="http://localhost/casadinhos/Desktop/categorias/banheiro/banheiro.html"><b>Banheiro</b></a></li>
+                <li class="nav-item"><a class="nav-link" href="http://localhost/casadinhos/Desktop/categorias/lavanderia/lavanderia.html"><b>Lavanderia</b></a></li>
+            </ul>
+    
+            <nav class="navbar">
+                <a class="navbar-brand" href="#"></a>
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="search" placeholder="buscar" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+                </form>
+            </nav>
+  
+            <a href="http://localhost/casadinhos/Desktop/doublepage/favoritos/favoritos.html"><i style="color: #FF3131;" class="fa-solid fa-heart"></i></a>
+            <a href="http://localhost/casadinhos/Desktop/doublepage/carrinho/carrinho.html"><i style="color: #FF3131;" class="fa-solid fa-cart-shopping"></i></a>
+            <a href="login.html"><i style="color: #FF3131;" class="fa-solid fa-user"></i></a>
+        </div>
+
+<section>
+    <div class="container">
+        <h2>Rastrear pedido</h2>
+        <form id="orderForm">
+            <input type="text" id="orderNumber" placeholder="Insira o numero do pedido" required>
+            <input type="submit" value="Rastrear encomenda">
+        </form>
+    
+        <div class="order-status" id="orderStatus">
+            <div class="status-step" id="step1">
+                <span>✓</span>
+                <p>Pedido Enviado</p>
+            </div>
+            <div class="status-step pending" id="step2">
+                <span>✓</span>
+                <p>Pedido Coletado</p>
+            </div>
+            <div class="status-step pending error" id="step3">
+                <span>✓</span>
+                <p>Saiu para a Entrega</p>
+            </div>
+        </div>
+    </div>
+    
+</section>
+
+<footer>
+    <div class="container-footer">
+        <div class="row-footer">
+            <div class="footer-col">
+                <h4>Empresa</h4>
+                <ul>
+                    <li><a href="http://localhost/casadinhos/Desktop/sobre.html"> Quem somos </a></li>
+                    <li><a href="http://localhost/casadinhos/Desktop/nossosservicos.html"> nossos serviços </a></li>
+                    <li><a href="http://localhost/casadinhos/Desktop/termos.html"> política de privacidade </a></li>
+                    <li><a href="https://www.google.com/maps/dir/-23.5405312,-46.6714624/Av.+Waldemar+Carlos+Pereira,+1776+-+Vila+Talarico,+S%C3%A3o+Paulo+-+SP,+03533-002/@-23.5412641,-46.754676,11z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x94ce6753e5626ae9:0x53c08290f61d8023!2m2!1d-46.5107347!2d-23.5475674?entry=ttu&g_ep=EgoyMDI0MDkwNC4wIKXMDSoASAFQAw%3D%3D"> Endereço</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Obter ajuda</h4>
+                <ul>
+                    <li><a href="http://localhost/casadinhos/Desktop/FAQ.html">FAQ</a></li>
+                    <li><a href="#">Transporte</a></li>
+                    <li><a href="#">devoluções</a></li>
+                    <li><a href="#">Status De Pedido</a></li>
+                    <li><a href="http://localhost/casadinhos/Desktop/pagamentos.html">Opções De Pagamento</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Loja online</h4>
+                <ul>
+                    <li><a href="http://localhost/casadinhos/Desktop/categorias/sala/sala.html">Sala</a></li>
+                    <li><a href="http://localhost/casadinhos/Desktop/categorias/cozinha/cozinha.html">Cozinha</a></li>
+                    <li><a href="http://localhost/casadinhos/Desktop/categorias/quarto/quarto.html">Quarto</a></li>
+                    <li><a href="http://localhost/casadinhos/Desktop/categorias/banheiro/banheiro.html">Banheiro</a></li>
+                    <li><a href="http://localhost/casadinhos/Desktop/categorias/lavanderia/lavanderia.html">Lavanderia</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Receba as melhores ofertas</h4>
+                <div class="form-sub">
+                    <form>
+                        <input type="email" placeholder="Digite o seu e-mail" required>
+                        <button>Cadastrar</button>
+                    </form>
+                </div>
+                <div class="medias-socias">
+                    <a href=" https://wa.me/5511973194312"> <i class="fa-brands fa-whatsapp"></i> </a>
+                    <a href="https://www.instagram.com/casadinhos_house?igsh=aGZ4dzBmdTd5eTZu"> <i class="fa-brands fa-instagram"></i> </a>
+                    <a href="#"> <i class="fa-brands fa-tiktok"></i> </a>
+                    <a href="mailto:casadinhoshouse@gmail.com"> <i class="fa-solid fa-envelope"></i> </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</footer>
+<script>
+    document.getElementById("orderForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+        const orderNumber = document.getElementById("orderNumber").value;
+        const orderStatusDiv = document.getElementById("orderStatus");
+
+    
+        const orderStatus = {
+            "123456": "shipped",
+            "789101": "collected",
+            "112131": "out-for-delivery"
+        };
+
+        const status = orderStatus[orderNumber];
+
+        
+        document.getElementById("step1").classList.add("pending");
+        document.getElementById("step2").classList.add("pending");
+        document.getElementById("step3").classList.add("pending");
+
+        document.getElementById("step1").classList.remove("error");
+        document.getElementById("step2").classList.remove("error");
+        document.getElementById("step3").classList.remove("error");
+
+        if (status) {
+            orderStatusDiv.style.display = "block";
+
+            if (status === "shipped") {
+                document.getElementById("step1").classList.remove("pending");
+            } else if (status === "collected") {
+                document.getElementById("step1").classList.remove("pending");
+                document.getElementById("step2").classList.remove("pending");
+            } else if (status === "out-for-delivery") {
+                document.getElementById("step1").classList.remove("pending");
+                document.getElementById("step2").classList.remove("pending");
+                document.getElementById("step3").classList.remove("pending");
+                document.getElementById("step3").classList.add("error");
+            }
+        } else {
+            orderStatusDiv.textContent = "Pedido não encontrado.";
+            orderStatusDiv.style.display = "block";
+        }
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://localhost/sitecasadinhoshouse/Mobile/styles/index.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="styles.css">
+    <title>Mobile casadinhos</title>
+    <style>
+    .btn-info {
+      color: #fff;
+      background-color: #ff3131;
+      border-color: #FF3131;
+}  
+    .btn-outline-success {
+      padding: 5px 10px; 
+      font-size: 14px; 
+      border-radius: 10px; 
+      border: 1px solid #FF3131; 
+      color: #FF3131; 
+      background-color: transparent; 
+      transition: background-color 0.3s, color 0.3s; 
+}
+
+    .btn-outline-success:hover {
+      border: 1px solid #FF3131;
+      background-color: #FF3131; 
+      color: #ffffff; 
+}
+
+    .product-card .add-to-cart {
+      background-color: #FF3131;
+      border: none;
+      color: #fff;
+      padding: 10px;
+      font-size: 14px;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+      text-align: center;
+      width: 100%;
+}
+    .form-inline {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+      -ms-flex-align: center;
+      align-items: center;
+      flex-wrap: nowrap;
+}
+
+    .form-control {
+      width: 250px;
+      padding: 5px 10px; 
+      font-size: 14px; 
+      border-radius: 10px;
+      border: 1px solid #b4b4b4; 
+      margin-right: 14px;
+}
+    h5 {
+      padding-top: 8px;
+      font-size: 18px;
+      flex-direction: column;
+}
+
+    h4 {
+      padding-top: 25px;
+      padding-left: 10px;
+}
+    </style>
+</head>
+<body>
+  <nav class="navbarslogan">
+    <span class="slogan">Aqui você encontra Alegria e conforto para o seu lar</span>
+</nav>
+    <header>
+        <div class="navbar">
+            <div class="menu-toggle" id="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <div class="logo">
+               <a href="http://localhost/sitecasadinhoshouse/Mobile/Pages/"><img src="https://i.ibb.co/hcd0M87/logo.png" class="logo" alt="Logo"></a> 
+            </div>
+            <ul class="nav-list" id="nav-list">
+              <div class="iconlist">
+                <a href="http://localhost/casadinhos/Desktop/doublepage/favoritos/favoritos.html"><i class="fa-solid fa-heart"></i></a>
+                <a href="http://localhost/casadinhos/Desktop/doublepage/carrinho/carrinho.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="login.html"><i class="fa-solid fa-user"></i></a>
+              </div>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Minha Conta</a></li>
+                <li><a href="http://localhost/sitecasadinhoshouse/Mobile/Pages/carrinho.html">Meu Carrinho</a></li>
+                <li><a href="#">Meus Favoritos</a></li>
+                <li><a href="#">Status do pedido</a></li>
+                <li><a href="#">Suporte</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </div>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+        </form>
+    </header>
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="3000">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <a href="@"><img src="https://i.ibb.co/kM2xjXy/Banner-de-site-para-loja-de-moda-masculina.png" class="d-block w-100" alt="Slide 2"></a>
+            </div>
+            <div class="carousel-item">
+                <a href="#"><img src="https://i.ibb.co/m6043Hn/casadinhosbaner3.png" class="d-block w-100" alt="Slide 3"></a>
+            </div>
+            <div class="carousel-item">
+                <a href="#"><img src="https://i.ibb.co/KmZT97P/casadinhosbaner4.png" class="d-block w-100" alt="Slide 4"></a>
+            </div>
+            <div class="carousel-item">
+                <a href="#"><img src="https://i.ibb.co/ZKp9GSz/Oferta-de-Inverno-casadinhos.png" class="d-block w-100" alt="Slide 4"></a>
+            </div>
+
+            
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Proximo</span>
+        </a>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </div>
+
+  <div class="containercategorias">
+      <div class="image-container">
+          <a href="http://localhost/sitecasadinhoshouse/Mobile/Pages/categorias/sala.html"><img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="rounded-circle" alt="categoria"></a>
+          <p class="image-title"><b>Sala</b></p>
+      </div>
+      <div class="image-container">
+          <a href="http://localhost/sitecasadinhoshouse/Mobile/Pages/categorias/cozinha.html"><img src="https://images.unsplash.com/photo-1565538810643-b5bdb714032a?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="rounded-circle" alt="categoria"></a>
+          <p class="image-title"><b>Cozinha</b></p>
+      </div>
+      <div class="image-container">
+          <a href="http://localhost/sitecasadinhoshouse/Mobile/Pages/categorias/quarto.html"><img src="https://images.unsplash.com/photo-1586105251261-72a756497a11?q=80&w=1558&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="rounded-circle" alt="categoria"></a>
+          <p class="image-title"><b>Quarto</b></p>
+      </div>
+      <div class="image-container">
+          <a href="http://localhost/sitecasadinhoshouse/Mobile/Pages/categorias/banheiro.html"><img src="https://plus.unsplash.com/premium_photo-1676320514136-5a15d9f97dfa?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="rounded-circle" alt="categoria"></a>
+          <p class="image-title"><b>Banheiro</b></p>
+      </div>
+      <div class="image-container">
+          <a href="http://localhost/sitecasadinhoshouse/Mobile/Pages/categorias/lavanderia.html"><img src="https://plus.unsplash.com/premium_photo-1664372899525-d99a419fd21a?q=80&w=1388&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="rounded-circle" alt="categoria"></a>
+          <p class="image-title"><b>Lavanderia</b></p>
+      </div>
+      <div class="image-container">
+          <a href="#"><img src="https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="rounded-circle" alt="categoria"></a>
+          <p class="image-title"><b>Mais Vendidos</b></p>
+      </div>
+      <div class="image-container">
+          <a href="#"><img src="https://images.unsplash.com/photo-1512106374988-c95f566d39ef?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="rounded-circle" alt="categoria"></a>
+          <p class="image-title"><b>Outros</b></p>
+      </div>
+    </div>
+
+      <h4>Destaques da semana</h4>
+      <div class="row">
+        <div class="product text-center col-lg-3 col-md-4 col-6">
+          <a href="http://localhost/sitecasadinhoshouse/Mobile/Pages/produtos/produto3.html">
+            <img class="img-fluid mb-3" src="https://m.media-amazon.com/images/I/51nINvyLIXL._AC._SR360,460.jpg" alt="" />
+          </a>
+          <div class="stars">
+            <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+            <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+            <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+            <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+            <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 196, 0);"></i>
+          </div>
+          <h5>Suporte para 6 Copos</h5>
+                <p class="price">R$48.00</p>
+                <button class="add-to-cart btn-info">Adicionar ao carrinho</button>
+        </div>
+        
+        <div class="product text-center col-lg-3 col-md-4 col-6">
+          <a href="http://localhost/casadinhos/Desktop/produtos/produto3.html">
+            <img class="img-fluid mb-3" src="https://m.media-amazon.com/images/I/41JrgcYjjHL._AC_UL320_.jpg" alt="" />
+          </a>
+          <div class="stars">
+            <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+            <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+            <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+            <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+            <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 196, 0);"></i>
+          </div>
+          <h5>Lixeira inox com tampa 5L</h5>
+                <p class="price">R$50.00</p>
+                <button class="add-to-cart btn-info">Adicionar ao carrinho</button>
+        </div>
+        
+        <div class="product text-center col-lg-3 col-md-4 col-6">
+          <a href="http://localhost/casadinhos/Desktop/produtos/produto3.html">
+            <img class="img-fluid mb-3" src="https://m.media-amazon.com/images/I/61tIEBcriyL._AC_SX679_.jpg" alt="" />
+          </a>
+          <div class="stars">
+            <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+            <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+            <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+            <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+            <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 196, 0);"></i>
+          </div>
+          <h5>Luminaria led de mesa</h5>
+                <p class="price">R$42.00</p>
+                <button class="add-to-cart btn-info">Adicionar ao carrinho</button>
+        </div>
+        
+        <div class="product text-center col-lg-3 col-md-4 col-6">
+          <a href="http://localhost/sitecasadinhoshouse/Mobile/Pages/produtos/produto2.html">
+            <img class="img-fluid mb-3" src="https://m.media-amazon.com/images/I/51A9ybEeCzL._AC_.jpg" alt="" />
+          </a>
+          <div class="stars">
+            <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+            <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+            <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+            <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+            <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 196, 0);"></i>
+          </div>
+          <h5>Jogo de copo whisky vidro</h5>
+                <p class="price">R$82.00</p>
+                <a href="http://localhost/sitecasadinhoshouse/Mobile/Pages/produtos/produto2.html"><button class="add-to-cart btn-info">Adicionar ao carrinho</button></a>
+        </div>
+      </div>
+
+      <section class="my-5 py-5" id="parallaxBanner">
+        <div class="container">
+          <h6>Nova promoção de temporada</h6>
+          <h3>
+            Coleção de taças com <br />
+            20% OFF!
+          </h3>
+          <button class="text-uppercase">Compre Agora</button>
+        </div>
+      </section>
+
+      <div>
+        <h4>Cozinha mais completa</h4>
+    </div>
+    <div class="container-recommendations">
+        <section class="recommendations">
+            <div class="product-row">
+                <div class="product-card">
+                    <img src="https://m.media-amazon.com/images/I/51fsBwKosbL._AC_SX679_.jpg" alt="Product 1">
+                    <h3>Conjunto fondue 11 peças</h3>
+                    <p class="price">R$98.00</p>
+                    <div class="stars">
+                        <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+                        <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+                        <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+                        <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+                        <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 196, 0);"></i>
+                      </div>
+                    <button class="add-to-cart btn-info">Adicionar ao carrinho</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_631948-MLU73993869152_012024-O.webp" alt="Product 2">
+                    <h3>Dosador de sabão</h3>
+                    <p class="price">R$39.99</p>
+                    <div class="stars">
+                        <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+                        <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+                        <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+                        <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+                        <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 196, 0);"></i>
+                      </div>
+                    <button class="add-to-cart btn-info">Adicionar ao carrinho</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://m.media-amazon.com/images/I/41nw+yL1iYL._AC_SX569_.jpg" alt="Product 3">
+                    <h3>Colher bailarina</h3>
+                    <p class="price">R$39.99</p>
+                    <div class="stars">
+                        <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+                        <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+                        <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+                        <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+                        <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 196, 0);"></i>
+                      </div>
+                    <button class="add-to-cart btn-info">Adicionar ao carrinho</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://m.media-amazon.com/images/I/61cKXnQjlqL._AC_SX679_.jpg" alt="Product 4">
+                    <h3>Bule viena 1L</h3>
+                    <p class="price">R$44.00</p>
+                    <div class="stars">
+                        <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+                        <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+                        <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+                        <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+                        <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 196, 0);"></i>
+                      </div>
+                    <button class="add-to-cart btn-info">Adicionar ao carrinho</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://m.media-amazon.com/images/I/51xQLAN2URL._AC_SX679_.jpg" alt="Product 4">
+                    <h3>Açucaleiro de aço</h3>
+                    <p class="price">R$42.00</p>
+                    <div class="stars">
+                        <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+                        <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+                        <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+                        <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+                        <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 196, 0);"></i>
+                      </div>
+                    <button class="add-to-cart btn-info">Adicionar ao carrinho</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://m.media-amazon.com/images/I/61jEfajg4OL._AC_SX569_.jpg" alt="Product 4">
+                    <h3>Porta tempeiro</h3>
+                    <p class="price">R$50.00</p>
+                    <div class="stars">
+                        <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+                        <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+                        <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+                        <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+                        <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 196, 0);"></i>
+                      </div>
+                    <button class="add-to-cart btn-info">Adicionar ao carrinho</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://m.media-amazon.com/images/I/41VPMPXgC7L._AC_SX679_.jpg" alt="Product 4">
+                    <h3>Jarra de vidro lisa</h3>
+                    <p class="price">R$42.00</p>
+                    <div class="stars">
+                        <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+                        <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+                        <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+                        <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+                        <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 196, 0);"></i>
+                      </div>
+                    <button class="add-to-cart btn-info">Adicionar ao carrinho</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <a class="baner-screen" href="#">
+        <img class="baner-screen" src="https://i.ibb.co/hydPQMz/pixelcut-export.png" alt="">
+    </a>
+
+    <h4>Adicionados recentemente</h4>
+      <div class="row">
+        <div class="product text-center col-lg-3 col-md-4 col-6">
+          <a href="http://localhost/casadinhos/Desktop/produtos/produto3.html">
+            <img class="img-fluid mb-3" src="https://m.media-amazon.com/images/I/51hcue82oPL._AC_SX679_.jpg" alt="" />
+          </a>
+          <div class="stars">
+            <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+            <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+            <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+            <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+            <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 196, 0);"></i>
+          </div>
+          <h5>Porta detergente</h5>
+                <p class="price">R$48.00</p>
+                <button class="add-to-cart btn-info">Adicionar ao carrinho</button>
+        </div>
+        
+        <div class="product text-center col-lg-3 col-md-4 col-6">
+          <a href="http://localhost/casadinhos/Desktop/produtos/produto3.html">
+            <img class="img-fluid mb-3" src="https://m.media-amazon.com/images/I/51h2IHO3cJS._AC_SX679_.jpg" alt="" />
+          </a>
+          <div class="stars">
+            <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+            <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+            <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+            <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+            <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 196, 0);"></i>
+          </div>
+          <h5>Lasanheira com tampa</h5>
+                <p class="price">R$50.00</p>
+                <button class="add-to-cart btn-info">Adicionar ao carrinho</button>
+        </div>
+
+        <div class="product text-center col-lg-3 col-md-4 col-6">
+          <a href="http://localhost/casadinhos/Desktop/produtos/produto3.html">
+            <img class="img-fluid mb-3" src="https://m.media-amazon.com/images/I/61L5u0hRRfL._AC_UL320_.jpg" alt="" />
+          </a>
+          <div class="stars">
+            <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+            <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+            <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+            <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+            <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 196, 0);"></i>
+          </div>
+          <h5>Mop Spray Rodo</h5>
+                <p class="price">R$42.00</p>
+                <button class="add-to-cart btn-info">Adicionar ao carrinho</button>
+        </div>
+        
+        <div class="product text-center col-lg-3 col-md-4 col-6">
+          <a href="http://localhost/casadinhos/Desktop/produtos/produto3.html">
+            <img class="img-fluid mb-3" src="https://m.media-amazon.com/images/I/51xQLAN2URL._AC_SX679_.jpg" alt="" />
+          </a>
+          <div class="stars">
+            <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+            <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+            <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+            <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+            <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 196, 0);"></i>
+          </div>
+          <h5>Açucaleiro de aço</h5>
+                <p class="price">R$98.00</p>
+                <button class="add-to-cart btn-info">Adicionar ao carrinho</button>
+        </div>
+
+        <div class="product text-center col-lg-3 col-md-4 col-6">
+          <a href="http://localhost/casadinhos/Desktop/produtos/produto3.html">
+            <img class="img-fluid mb-3" src="https://m.media-amazon.com/images/I/71BkWw2OBbL._AC_SX679_.jpg" alt="" />
+          </a>
+          <div class="stars">
+            <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+            <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+            <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+            <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+            <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 196, 0);"></i>
+          </div>
+          <h5>Taça de vidro</h5>
+                <p class="price">R$42.00</p>
+                <button class="add-to-cart btn-info">Adicionar ao carrinho</button>
+        </div>
+        
+        <div class="product text-center col-lg-3 col-md-4 col-6">
+          <a href="http://localhost/casadinhos/Desktop/produtos/produto3.html">
+            <img class="img-fluid mb-3" src="https://m.media-amazon.com/images/I/61jEfajg4OL._AC_SX569_.jpg" alt="" />
+          </a>
+          <div class="stars">
+            <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+            <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+            <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+            <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+            <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 196, 0);"></i>
+          </div>
+          <h5>Porta tempeiro</h5>
+                <p class="price">R$98.00</p>
+                <button class="add-to-cart btn-info">Adicionar ao carrinho</button>
+        </div>
+
+        <div class="product text-center col-lg-3 col-md-4 col-6">
+          <a href="http://localhost/casadinhos/Desktop/produtos/produto3.html">
+            <img class="img-fluid mb-3" src="https://m.media-amazon.com/images/I/5188B9YLfKL._AC_SX679_.jpg" alt="" />
+          </a>
+          <div class="stars">
+            <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+            <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+            <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+            <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+            <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 196, 0);"></i>
+          </div>
+          <h5>Escorredor de louça</h5>
+                <p class="price">R$32.00</p>
+                <button class="add-to-cart btn-info">Adicionar ao carrinho</button>
+        </div>
+        
+        <div class="product text-center col-lg-3 col-md-4 col-6">
+          <a href="http://localhost/casadinhos/Desktop/produtos/produto3.html">
+            <img class="img-fluid mb-3" src="https://http2.mlstatic.com/D_NQ_NP_956748-MLU74415534332_022024-O.webp" alt="" />
+          </a>
+          <div class="stars">
+            <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+            <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+            <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+            <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+            <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 196, 0);"></i>
+          </div>
+          <h5>Escova Sanitaria</h5>
+                <p class="price">R$50.00</p>
+                <button class="add-to-cart btn-info">Adicionar ao carrinho</button>
+        </div>
+        
+        <div class="product text-center col-lg-3 col-md-4 col-6">
+          <a href="http://localhost/casadinhos/Desktop/produtos/produto3.html">
+            <img class="img-fluid mb-3" src="https://m.media-amazon.com/images/I/41VPMPXgC7L._AC_SX679_.jpg" alt="" />
+          </a>
+          <div class="stars">
+            <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+            <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+            <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+            <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+            <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 196, 0);"></i>
+          </div>
+          <h5>Jarra de vidro lisa</h5>
+                <p class="price">R$42.00</p>
+                <button class="add-to-cart btn-info">Adicionar ao carrinho</button>
+        </div>
+        
+        <div class="product text-center col-lg-3 col-md-4 col-6">
+          <a href="http://localhost/casadinhos/Desktop/produtos/produto3.html">
+            <img class="img-fluid mb-3" src="https://http2.mlstatic.com/D_NQ_NP_740930-MLB69433698650_052023-O.webp" alt="" />
+          </a>
+          <div class="stars">
+            <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+            <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+            <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+            <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+            <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 196, 0);"></i>
+          </div>
+          <h5>Cortina branca grande</h5>
+                <p class="price">R$82.00</p>
+                <button class="add-to-cart btn-info">Adicionar ao carrinho</button>
+        </div>
+      </div>
+
+      
+
+    
+
+    <footer>
+        <div class="container-footer">
+            <div class="row-footer">
+                <div class="footer-col">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="http://localhost/casadinhos/Desktop/sobre.html"> Quem somos </a></li>
+                        <li><a href="http://localhost/casadinhos/Desktop/nossosservicos.html"> nossos serviços </a></li>
+                        <li><a href=""> política de privacidade </a></li>
+                        <li><a href="https://www.google.com/maps/dir/-23.5405312,-46.6714624/Av.+Waldemar+Carlos+Pereira,+1776+-+Vila+Talarico,+S%C3%A3o+Paulo+-+SP,+03533-002/@-23.5412641,-46.754676,11z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x94ce6753e5626ae9:0x53c08290f61d8023!2m2!1d-46.5107347!2d-23.5475674?entry=ttu&g_ep=EgoyMDI0MDkwNC4wIKXMDSoASAFQAw%3D%3D"> Endereço</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Obter ajuda</h4>
+                    <ul>
+                        <li><a href="http://localhost/casadinhos/Desktop/FAQ.html">FAQ</a></li>
+                        <li><a href="#">Transporte</a></li>
+                        <li><a href="#">devoluções</a></li>
+                        <li><a href="#">Status De Pedido</a></li>
+                        <li><a href="http://localhost/casadinhos/Desktop/pagamentos.html">Opções De Pagamento</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Loja online</h4>
+                    <ul>
+                        <li><a href="http://localhost/casadinhos/Mobile/categorias/sala.html">Sala</a></li>
+                        <li><a href="">Cozinha</a></li>
+                        <li><a href="">Quarto</a></li>
+                        <li><a href="">Banheiro</a></li>
+                        <li><a href="">Lavanderia</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Receba as melhores ofertas</h4>
+                    <div class="form-sub">
+                        <form>
+                            <input type="email" placeholder="Digite o seu e-mail" required>
+                            <button>Cadastrar</button>
+                        </form>
+                    </div>
+
+                    <div class="medias-socias">
+                        <a href="#"> <i class="fa-brands fa-whatsapp"></i> </a>
+                        <a href="#"> <i class="fa-brands fa-instagram"></i> </a>
+                        <a href="#"> <i class="fa-brands fa-tiktok"></i> </a>
+                        <a href="#"> <i class="fa-solid fa-envelope"></i> </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.11.1/dist/umd/popper.min.js" integrity="sha384-rbsA0h1m1GQ/8WdrD/R2sG9z4i3Pzd5iL0v8N5v93vDp6DMy4f56bP6O3y75z1OXs" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js" integrity="sha384-4gbE6z3KN4KzdAB4d0I03UQv4iV5P3yZjt1R8W2ol04l+zixw4gu2Op9ErvZYlGT4" crossorigin="anonymous"></script>
+   <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const menuToggle = document.getElementById('menu-toggle');
+        const navList = document.getElementById('nav-list');
+    
+        menuToggle.addEventListener('click', () => {
+            navList.classList.toggle('active');
+        });
+    
+        document.addEventListener('click', (event) => {
+            if (!menuToggle.contains(event.target) && !navList.contains(event.target)) {
+                navList.classList.remove('active');
+            }
+        });
+    });
+    
+   </script>
+</body>
+</html>
