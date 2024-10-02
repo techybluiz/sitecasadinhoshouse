@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://localhost/casadinhos/Assets/css/produto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>Casadinhos House</title>
+    <style>
+        .modal {
+            display: none; /* Esconder o modal por padrão */
+            position: fixed; /* Fixar o modal na tela */
+            z-index: 1; /* Garantir que o modal fique acima de outros elementos */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto; /* Permitir rolagem se o conteúdo for muito grande */
+            background-color: rgba(0,0,0,0.4); /* Fundo escurecido */
+          }
+          
+          .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 50%;
+            height: 50%;
+          }
+          
+          .close {
+            color: #aaa; 
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+          }
+          
+          .close:hover,
+          .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+          }
+          .product-gallery img {
+            width: 100%; /* Ajusta a imagem para ocupar toda a largura do contêiner */
+            height: 300px; /* Defina a altura fixa que você deseja para as imagens */
+            object-fit:contain; /* Garante que a imagem cubra o espaço sem distorcer */
+            border-radius: 0; /* Remova ou ajuste o arredondamento se necessário */
+        }
+        .gallery-thumbnails img {
+            width: 100%;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+        .gallery-thumbnails img.active {
+            border-color: #FF3131;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbarslogan">
+        <span class="slogan">Aqui você encontra Alegria e conforto para o seu lar</span>
+    </nav>
+
+    <div class="content">
+       <a href="http://localhost/casadinhos/Desktop/"><img src="https://i.ibb.co/hcd0M87/logo.png" class="logo" alt="Logo"></a> 
+        <ul class="nav">
+          <li class="nav-item"><a class="nav-link active" href="http://localhost/casadinhos/Desktop/categorias/sala/sala.html"><b>Sala</b></a></li>
+        <li class="nav-item"><a class="nav-link" href="http://localhost/casadinhos/Desktop/categorias/cozinha/cozinha.html"><b>Cozinha</b></a></li>
+        <li class="nav-item"><a class="nav-link" href="http://localhost/casadinhos/Desktop/categorias/quarto/quarto.html"><b>Quarto</b></a></li>
+        <li class="nav-item"><a class="nav-link" href="http://localhost/casadinhos/Desktop/categorias/banheiro/banheiro.html"><b>Banheiro</b></a></li>
+        <li class="nav-item"><a class="nav-link" href="http://localhost/casadinhos/Desktop/categorias/lavanderia/lavanderia.html"><b>Lavanderia</b></a></li>
+    </ul>
+
+        <nav class="navbar">
+            <a class="navbar-brand" href="#"></a>
+            <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="buscar" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+            </form>
+        </nav>
+
+        <a href="http://localhost/casadinhos/Desktop/doublepage/favoritos/favoritos.html"><i style="color: #FF3131;" class="fa-solid fa-heart"></i></a>
+            <a href="http://localhost/casadinhos/Desktop/doublepage/carrinho/carrinho.html"><i style="color: #FF3131;" class="fa-solid fa-cart-shopping"></i></a>
+            <a href="http://localhost/casadinhos/Desktop/login.html"><i style="color: #FF3131;" class="fa-solid fa-user"></i></a>
+    </div>
+<br>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="product-gallery">
+                    <img id="main-image" src="https://m.media-amazon.com/images/I/61nUqUWtHgL._AC_SX679_.jpg" alt="Imagem do Produto">
+                </div>
+                <div class="gallery-thumbnails">
+                    <div class="row">
+                        <div class="col-3">
+                            <img src="https://m.media-amazon.com/images/I/61nUqUWtHgL._AC_SX679_.jpg" alt="Imagem 1">
+                        </div>
+                        <div class="col-3">
+                            <img src="https://m.media-amazon.com/images/I/61+OmlqqXGL._AC_SX679_.jpg" alt="Imagem 2">
+                        </div>
+                        <div class="col-3">
+                            <img src="https://m.media-amazon.com/images/I/51vwwIrDYlL._AC_.jpg" alt="Imagem 3">
+                        </div>
+                        <div class="col-3">
+                            <img src="https://m.media-amazon.com/images/I/515lGSuWm0L._AC_.jpg" alt="Imagem 4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h1 class="product-title">Jogo de 6 copos de vidro para whisky</h1>
+                <div class="row">
+                    <span>
+                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                        <i class="fa-solid fa-star" style="color: #cccccb;"></i>
+                    </span>
+
+                    <p class="saldo">30 produtos vendidos</p>
+                    
+                </div>
+               
+                <div class="d-flex align-items-center">
+                    <span class="price"><b>R$ 70,00 no Pix</b></span>
+                    <span class="discount ms-2">5% off</span>
+                </div>
+                <p style="color: #545454;">Ou 85,00 em até 8x sem juros</p>
+                <div class="d-flex align-items-center mb-3">
+                    <button class="btn btn-danger" id="decrement">-</button>
+                    <input type="number" value="1" class="form-control mx-2" id="quantity" style="width: 60px; text-align: center;">
+                    <button class="btn btn-danger" id="increment">+</button>
+                </div>
+                
+                <button class="btn btn-primary mb-2" onclick="abrirModal()">Adicionar ao Carrinho</button>
+
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h3 class="titulomodal">Produto adicionado ao carrinho!</h3>
+                        <div class="modal-footer">
+                            <a href="#"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Continuar comprando</button></a>
+                            <a href="carrinho.html"><button type="button" class="btn btn-primary">Ir para o carrinho</button></a>
+                          </div>
+                    </div>
+                </div>
+                <button style="color: #FF3131; background-color: #ffffff;" class="btn btn-primary mb-2">Salvar como favoritos</button>
+
+                <div id="cep-container" class="mt-4">
+                    <h5>Insira o seu CEP</h5>
+                    <div class="d-flex">
+                        <input type="text" name="" id="cep" placeholder="00000-000"/>
+                        <button style="background-color: #FF3131;" class="btn btn-secondary" id="calculate-shipping">Calcular</button>
+                    </div>
+                    <p id="cep-error" class="text-danger mt-2" style="display: none;">CEP inválido. Por favor, insira um CEP válido.</p>
+                    <a class="ceplink" href="https://buscacepinter.correios.com.br/app/endereco/index.php" target="_blank" rel="noopener noreferrer">Não sei meu cep</a>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div style="flex-wrap: nowrap;" class="row">
+            <div class="description">
+                <h4>Descrição</h4>
+                <p>Elegância e resistência em cada detalhe. Esses copos foram cuidadosamente projetados <br>
+                    para elevar a experiência de degustação das suas bebidas favoritas. Com um design<br>
+                    sofisticado e moderno, eles não apenas aprimoram o sabor e aroma do whisky e de<br>
+                    outros drinks, mas também adicionam um toque de classe a qualquer ambiente. <br>
+                    Seja para uma noite tranquila ou para receber convidados, estes copos garantem<br>
+                    uma experiência refinada e memorável em todas as ocasiões</p>
+            </div>
+    
+            <div class="col-md-6">
+                <h4>Sobre este item</h4>
+                <ul>
+                    <li>Escolher o copo de whisky adequado é fundamental para apreciar o sabor e aroma da sua bebida. As peças são de vidro, com um formato sofisticado, que também dão um toque de bom gosto à sua casa.</li>
+                    <li>É também um objeto decorativo de muita classe que ficará muito bem no móvel de sua sala de jantar ou no ambiente de bar.</li>
+                    <li>Este copo de Whisky/drink é charmoso, tem o fundo alargado e Vidro Resistente.</li>
+                    <li>- Vidro grosso de alta qualidade.</li>
+                    <li>- Design de boca larga fácil de adicionar gelo.</li>
+                    <li><strong>Material:</strong> Vidro</li>
+                    <li><strong>Composto por:</strong> 6 peças</li>
+                    <li><strong>Dimensões:</strong> 8cm x 7,5cm</li>
+                    <li><strong>Conteúdo da Embalagem:</strong> 06 Copos de Whisky</li>
+                </ul>
+            </div>
+        </div>
+        <br>
+
+        <h2>Produtos relacionados</h2>
+        <div class="row mx-auto container-fluid">
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+              <img class="img-fluid mb-3" src="https://m.media-amazon.com/images/I/61oElW9PmgL._AC_SX679_.jpg" alt="" />
+              <div class="stars">
+                <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+                <i class="fas fa-star" style="color: rgb(255, 196, 0) "></i>
+                <i class="fas fa-star" style="color: rgb(255, 196, 0) "></i>
+                <i class="fa-solid fa-star-half-stroke" style="color: #FFD43B;"></i>
+                <i class="fas fa-star" style="color: rgb(189, 189, 189)"></i>
+              </div>
+              <h5 class="p-name">Kit jogo 6 Copos De Vidro Whisky</h5>
+              <h4 class="p-price">R$38,00</h4>
+              <button class="buy-btn text-uppercase">Compre Agora</button>
+            </div>
+          
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+              <img class="img-fluid mb-3" src="https://m.media-amazon.com/images/I/51idE6-d+wL._AC_SX679_.jpg" alt="" />
+              <div class="stars">
+                <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+                <i class="fas fa-star" style="color: rgb(255, 196, 0) "></i>
+                <i class="fas fa-star" style="color: rgb(255, 196, 0) "></i>
+                <i class="fas fa-star" style="color: rgb(189, 189, 189)"></i>
+                <i class="fas fa-star" style="color: rgb(189, 189, 189)"></i>
+              </div>
+              <h5 class="p-name">Copos de Vidro Riviera On The Rocks</h5>
+              <h4 class="p-price">R$50,00</h4>
+              <button class="buy-btn text-uppercase">Compre Agora</button>
+            </div>
+          
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+              <img class="img-fluid mb-3" src="https://m.media-amazon.com/images/I/51hNaQ6oZuL._AC_SX679_.jpg" alt="" />
+              <div class="stars">
+                <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+                <i class="fas fa-star" style="color: rgb(255, 196, 0) "></i>
+                <i class="fas fa-star" style="color: rgb(255, 196, 0) "></i>
+                <i class="fas fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 196, 0)"></i>
+              </div>
+              <h5 class="p-name">GLENCAIRN Copo de Whisky premium</h5>
+              <h4 class="p-price">R$22,00</h4>
+              <button class="buy-btn text-uppercase">Compre Agora</button>
+            </div>
+          
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+              <img class="img-fluid mb-3" src="https://m.media-amazon.com/images/I/519h-wKt6dL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="" />
+              <div class="stars">
+                <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+                <i class="fas fa-star" style="color: rgb(255, 196, 0) "></i>
+                <i class="fas fa-star" style="color: rgb(255, 196, 0) "></i>
+                <i class="fa-solid fa-star-half-stroke" style="color: #FFD43B;"></i>
+                <i class="fas fa-star" style="color: rgb(189, 189, 189);"></i>
+              </div>
+              <h5 class="p-name">Stanley, Copo Baixo</h5>
+              <h4 class="p-price">R$82,00</h4>
+              <button class="buy-btn text-uppercase">Compre Agora</button>
+            </div>
+
+            <a class="promocao" href="#"><img class="promocao" src="https://i.postimg.cc/yNdGYdzH/Banner-de-site-para-loja-de-moda-masculina.png" alt=""></a>
+
+
+        <h2>Você tambem pode gostar</h2>
+        <div class="row mx-auto container-fluid">
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+              <img class="img-fluid mb-3" src="https://m.media-amazon.com/images/I/51vZ0mh363L._AC_SX679_.jpg" alt="" />
+              <div class="stars">
+                <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+                <i class="fas fa-star" style="color: rgb(255, 196, 0) "></i>
+                <i class="fas fa-star" style="color: rgb(255, 196, 0) "></i>
+                <i class="fa-solid fa-star-half-stroke" style="color: #FFD43B;"></i>
+                <i class="fas fa-star" style="color: rgb(189, 189, 189)"></i>
+              </div>
+              <h5 class="p-name">Forma De Gelo Silicone</h5>
+              <h4 class="p-price">R$38,00</h4>
+              <button class="buy-btn text-uppercase">Compre Agora</button>
+            </div>
+          
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+              <img class="img-fluid mb-3" src="https://images-na.ssl-images-amazon.com/images/I/51DGzWi4lrL._AC_UL165_SR165,165_.jpg" alt="" />
+              <div class="stars">
+                <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+                <i class="fas fa-star" style="color: rgb(255, 196, 0) "></i>
+                <i class="fas fa-star" style="color: rgb(255, 196, 0) "></i>
+                <i class="fas fa-star" style="color: rgb(189, 189, 189)"></i>
+                <i class="fas fa-star" style="color: rgb(189, 189, 189)"></i>
+              </div>
+              <h5 class="p-name">Copo para shot</h5>
+              <h4 class="p-price">R$50,00</h4>
+              <button class="buy-btn text-uppercase">Compre Agora</button>
+            </div>
+          
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+              <img class="img-fluid mb-3" src="https://m.media-amazon.com/images/I/61HSWjR-MQL._AC_SX679_.jpg" alt="" />
+              <div class="stars">
+                <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+                <i class="fas fa-star" style="color: rgb(255, 196, 0) "></i>
+                <i class="fas fa-star" style="color: rgb(255, 196, 0) "></i>
+                <i class="fas fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 196, 0)"></i>
+              </div>
+              <h5 class="p-name">Bandeja de Bambu</h5>
+              <h4 class="p-price">R$22,00</h4>
+              <button class="buy-btn text-uppercase">Compre Agora</button>
+            </div>
+          
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+              <img class="img-fluid mb-3" src="https://images-na.ssl-images-amazon.com/images/I/51StANeJ4xL._AC_UL165_SR165,165_.jpg" alt="" />
+              <div class="stars">
+                <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+                <i class="fas fa-star" style="color: rgb(255, 196, 0) "></i>
+                <i class="fas fa-star" style="color: rgb(255, 196, 0) "></i>
+                <i class="fa-solid fa-star-half-stroke" style="color: #FFD43B;"></i>
+                <i class="fas fa-star" style="color: rgb(189, 189, 189);"></i>
+              </div>
+              <h5 class="p-name">Taça para gin</h5>
+              <h4 class="p-price">R$82,00</h4>
+              <button class="buy-btn text-uppercase">Compre Agora</button>
+            </div>
+
+            
+            <footer>
+                <div class="container-footer">
+                    <div class="row-footer">
+                        <div class="footer-col">
+                            <h4>Empresa</h4>
+                            <ul>
+                                <li><a href="sobre.html"> Quem somos </a></li>
+                                <li><a href=""> nossos serviços </a></li>
+                                <li><a href=""> política de privacidade </a></li>
+                                <li><a href=""> Endereço</a></li>
+                            </ul>
+                        </div>
+      
+                        <div class="footer-col">
+                            <h4>Obter ajuda</h4>
+                            <ul>
+                                <li><a href="http://localhost/casadinhos/Desktop/FAQ.html">FAQ</a></li>
+                                <li><a href="#">Transporte</a></li>
+                                <li><a href="#">devoluções</a></li>
+                                <li><a href="#">Status De Pedido</a></li>
+                                <li><a href="http://localhost/casadinhos/Desktop/pagamentos.html">Opções De Pagamento</a></li>
+                            </ul>
+                        </div>
+      
+                        <div class="footer-col">
+                            <h4>Loja online</h4>
+                            <ul>
+                                <li><a href="http://localhost/casadinhos/Desktop/categorias/sala/sala.html">Sala</a></li>
+                                <li><a href="http://localhost/casadinhos/Desktop/categorias/cozinha/cozinha.html">Cozinha</a></li>
+                                <li><a href="http://localhost/casadinhos/Desktop/categorias/quarto/quarto.html">Quarto</a></li>
+                                <li><a href="http://localhost/casadinhos/Desktop/categorias/banheiro/banheiro.html">Banheiro</a></li>
+                                <li><a href="http://localhost/casadinhos/Desktop/categorias/lavanderia/lavanderia.html">Lavanderia</a></li>
+                            </ul>
+                        </div>
+      
+                        <div class="footer-col">
+                            <h4>Receba as melhores ofertas</h4>
+                            <div class="form-sub">
+                                <form>
+                                    <input type="email" placeholder="Digite o seu e-mail" required>
+                                    <button>Cadastrar</button>
+                                </form>
+                            </div>
+        
+                            <div class="medias-socias">
+                                <a href="#"> <i class="fa-brands fa-whatsapp"></i> </a>
+                                <a href="#"> <i class="fa-brands fa-instagram"></i> </a>
+                                <a href="#"> <i class="fa-brands fa-tiktok"></i> </a>
+                                <a href="#"> <i class="fa-solid fa-envelope"></i> </a>
+                            </div>
+        
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.8/jquery.inputmask.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('#cep').inputmask('99999-999');
+        })
+    </script>
+
+    <script>
+        document.getElementById('increment').addEventListener('click', function () {
+            var quantity = document.getElementById('quantity');
+            quantity.value = parseInt(quantity.value) + 1;
+        });
+
+        document.getElementById('decrement').addEventListener('click', function () {
+            var quantity = document.getElementById('quantity');
+            if (quantity.value > 1) {
+                quantity.value = parseInt(quantity.value) - 1;
+            }
+        });
+    </script>
+
+    
+
+    <script>
+        function abrirModal() {
+            document.getElementById("myModal").style.display = "block";
+          }
+          
+          // Função para fechar o modal
+          var span = document.getElementsByClassName("close")[0];
+          span.onclick = function() {
+            document.getElementById("myModal").style.display = "none";   
+          
+          }
+    </script>
+            
+    <script>
+        const mainImage = document.getElementById('main-image');
+        const thumbnails = document.querySelectorAll('.gallery-thumbnails img');
+
+        thumbnails.forEach(thumb => {
+            thumb.addEventListener('click', function() {
+                mainImage.src = this.src;
+                thumbnails.forEach(img => img.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
+
+</body>
+</html>

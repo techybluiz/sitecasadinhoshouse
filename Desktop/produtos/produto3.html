@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://localhost/casadinhos/Assets/css/produto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>Casadinhos House</title>
+</head>
+<body>
+    <nav class="navbarslogan">
+        <span class="slogan">Aqui você encontra Felicidade, Qualidade e Variedade</span>
+    </nav>
+
+    <div class="content">
+        <a href="http://localhost/casadinhos/Desktop/"><img src="https://i.ibb.co/hcd0M87/logo.png" class="logo" alt="Logo"></a> 
+         <ul class="nav">
+             <li class="nav-item"><a class="nav-link active" href="http://localhost/casadinhos/Desktop/categorias/sala/sala.html"><b>Sala</b></a></li>
+             <li class="nav-item"><a class="nav-link" href="http://localhost/casadinhos/Desktop/categorias/cozinha/cozinha.html"><b>Cozinha</b></a></li>
+             <li class="nav-item"><a class="nav-link" href="http://localhost/casadinhos/Desktop/categorias/quarto/quarto.html"><b>Quarto</b></a></li>
+             <li class="nav-item"><a class="nav-link" href="http://localhost/casadinhos/Desktop/categorias/banheiro/banheiro.html"><b>Banheiro</b></a></li>
+             <li class="nav-item"><a class="nav-link" href="http://localhost/casadinhos/Desktop/categorias/lavanderia/lavanderia.html"><b>Lavanderia</b></a></li>
+         </ul>
+ 
+         <nav class="navbar">
+             <a class="navbar-brand" href="#"></a>
+             <form class="form-inline">
+                 <input class="form-control mr-sm-2" type="search" placeholder="buscar" aria-label="Search">
+                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+             </form>
+         </nav>
+
+         <a href="http://localhost/casadinhos/Desktop/doublepage/favoritos/favoritos.html"><i style="color: #FF3131;" class="fa-solid fa-heart"></i></a>
+         <a href="http://localhost/casadinhos/Desktop/doublepage/carrinho/carrinho.html"><i style="color: #FF3131;" class="fa-solid fa-cart-shopping"></i></a>
+         <a href="http://localhost/casadinhos/Desktop/login.html"><i style="color: #FF3131;" class="fa-solid fa-user"></i></a>
+     </div>
+
+
+        <br>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="product-gallery">
+                    <img src="https://m.media-amazon.com/images/I/61tIEBcriyL._AC_SX679_.jpg" alt="Produto 1">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h1 class="product-title">Luminária Led de Mesa</h1>
+                <span>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <i class="fa-solid fa-star" style="color: #cccccb;"></i>
+                </span>
+                <div class="d-flex align-items-center">
+                    <span class="price"><b>R$ 42,00 no Pix</b></span>
+                    <span class="discount ms-2">5% off</span>
+                </div>
+                <p style="color: #545454;">Ou 48,00 em até 8x sem juros</p>
+                <div class="d-flex align-items-center mb-3">
+                    <button class="btn btn-danger" id="decrement">-</button>
+                    <input type="number" value="1" class="form-control mx-2" id="quantity" style="width: 60px; text-align: center;">
+                    <button class="btn btn-danger" id="increment">+</button>
+                </div>
+                
+                <button class="btn btn-primary mb-2">Adicionar ao carrinho</button>
+                <button style="color: #FF3131; background-color: #ffffff;" class="btn btn-primary mb-2">Salvar como favoritos</button>
+
+                <div id="cep-container" class="mt-4">
+                    <h5>Insira o seu CEP</h5>
+                    <div class="d-flex">
+                        <input type="text" class="form-control me-2" id="cep-input" placeholder="00000-000">
+                        <button style="background-color: #FF3131;" class="btn btn-secondary" id="calculate-shipping">Calcular</button>
+                    </div>
+                    <p id="cep-error" class="text-danger mt-2" style="display: none;">CEP inválido. Por favor, insira um CEP válido.</p>
+                    <a class="ceplink" href="https://buscacepinter.correios.com.br/app/endereco/index.php" target="_blank" rel="noopener noreferrer">Não sei meu cep</a>
+                </div>
+            </div>
+
+        </div>
+        </div>
+
+        <div style="flex-wrap: nowrap;" class="row">
+            <div class="description">
+                <h4>Descrição</h4>
+                <p>
+                    Desfrute de uma iluminação suave e elegante com nossa luminária em formato de lua. 
+                    A luz LED proporciona um ambiente relaxante e perfeito para leitura, trabalho ou simplesmente
+                     para decorar seu espaço. A lua interna cria um efeito visual único e encantador.
+                    Nossa luminária de mesa com lua é ideal para quem busca um ambiente tranquilo e sofisticado. 
+                    A luz suave e a forma da lua proporcionam uma sensação de bem-estar e criam um clima perfeito
+                    para meditação e descanso.</p>
+            </div>
+    
+            <div class="col-md-6">
+                <h4>Sobre este item</h4>
+                <ul>
+                    <li> A luminária apresenta uma esfera de LED que encapsula uma representação detalhada da lua, recriando sua beleza e leveza. Ideal para quem aprecia um toque de elegância celestial em sua decoração.</li>
+                    <li>Equipado com LEDs de alta qualidade, oferece uma iluminação suave e regulável que pode ser ajustada conforme sua necessidade. Perfeita para criar um ambiente relaxante ou destacar detalhes sutis em seu espaço.</li>
+                    <li>Ideal para diversos ambientes, como salas de estar, quartos, escritórios ou qualquer outro espaço onde você deseja adicionar um toque de charme e sofisticado.</li>
+                    <li>- Facil de usar</li>
+                    <li>- Equipado com LEDs de baixo consumo energético</li>
+                    <li><strong>Marca:</strong> Genérico</li>
+                    <li><strong>Fonte de alimentação:</strong> Cabo USB</li>
+                    <li><strong>Dimensões:</strong> 8cm x 6,5cm</li>
+                </ul>
+            </div>
+        </div>
+        <br>
+
+        <h2>Produtos relacionados</h2>
+        <div class="row mx-auto container-fluid">
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+              <img class="img-fluid mb-3" src="https://m.media-amazon.com/images/I/61jDmkpRltL._AC_SX679_.jpg" alt="" />
+              <div class="stars">
+                <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+                <i class="fas fa-star" style="color: rgb(255, 196, 0) "></i>
+                <i class="fas fa-star" style="color: rgb(255, 196, 0) "></i>
+                <i class="fa-solid fa-star-half-stroke" style="color: #FFD43B;"></i>
+                <i class="fas fa-star" style="color: rgb(189, 189, 189)"></i>
+              </div>
+              <h5 class="p-name">Luminária De Mesa</h5>
+              <h4 class="p-price">R$38,00</h4>
+              <button class="buy-btn text-uppercase">Compre Agora</button>
+            </div>
+          
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+              <img class="img-fluid mb-3" src="https://m.media-amazon.com/images/I/41K2A8DZC5L._AC_.jpg" alt="" />
+              <div class="stars">
+                <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+                <i class="fas fa-star" style="color: rgb(255, 196, 0) "></i>
+                <i class="fas fa-star" style="color: rgb(255, 196, 0) "></i>
+                <i class="fas fa-star" style="color: rgb(189, 189, 189)"></i>
+                <i class="fas fa-star" style="color: rgb(189, 189, 189)"></i>
+              </div>
+              <h5 class="p-name">Luminária Modelo Lunar</h5>
+              <h4 class="p-price">R$50,00</h4>
+              <button class="buy-btn text-uppercase">Compre Agora</button>
+            </div>
+          
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+              <img class="img-fluid mb-3" src="https://m.media-amazon.com/images/I/41GLQd+gCxL._AC_SX569_.jpg" alt="" />
+              <div class="stars">
+                <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+                <i class="fas fa-star" style="color: rgb(255, 196, 0) "></i>
+                <i class="fas fa-star" style="color: rgb(255, 196, 0) "></i>
+                <i class="fas fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 196, 0)"></i>
+              </div>
+              <h5 class="p-name">Luminária Led Noturna</h5>
+              <h4 class="p-price">R$22,00</h4>
+              <button class="buy-btn text-uppercase">Compre Agora</button>
+            </div>
+          
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+              <img class="img-fluid mb-3" src="https://m.media-amazon.com/images/I/51SOlccG7tL._AC_SX679_.jpg" alt="" />
+              <div class="stars">
+                <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+                <i class="fas fa-star" style="color: rgb(255, 196, 0) "></i>
+                <i class="fas fa-star" style="color: rgb(255, 196, 0) "></i>
+                <i class="fa-solid fa-star-half-stroke" style="color: #FFD43B;"></i>
+                <i class="fas fa-star" style="color: rgb(189, 189, 189);"></i>
+              </div>
+              <h5 class="p-name">Abajur Luminária Mesa</h5>
+              <h4 class="p-price">R$82,00</h4>
+              <button class="buy-btn text-uppercase">Compre Agora</button>
+            </div>
+
+            <a class="promocao" href="#"><img class="promocao" src="https://i.postimg.cc/yNdGYdzH/Banner-de-site-para-loja-de-moda-masculina.png" alt=""></a>
+
+
+        <h2>Você tambem pode gostar</h2>
+        <div class="row mx-auto container-fluid">
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+              <img class="img-fluid mb-3" src="https://m.media-amazon.com/images/I/61cXMG2EF-L._AC_SX569_.jpg" alt="" />
+              <div class="stars">
+                <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+                <i class="fas fa-star" style="color: rgb(255, 196, 0) "></i>
+                <i class="fas fa-star" style="color: rgb(255, 196, 0) "></i>
+                <i class="fa-solid fa-star-half-stroke" style="color: #FFD43B;"></i>
+                <i class="fas fa-star" style="color: rgb(189, 189, 189)"></i>
+              </div>
+              <h5 class="p-name">Lampada de mesa</h5>
+              <h4 class="p-price">R$38,00</h4>
+              <button class="buy-btn text-uppercase">Compre Agora</button>
+            </div>
+          
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+              <img class="img-fluid mb-3" src="https://m.media-amazon.com/images/I/41083+CotUL._AC_SX569_.jpg" alt="" />
+              <div class="stars">
+                <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+                <i class="fas fa-star" style="color: rgb(255, 196, 0) "></i>
+                <i class="fas fa-star" style="color: rgb(255, 196, 0) "></i>
+                <i class="fas fa-star" style="color: rgb(189, 189, 189)"></i>
+                <i class="fas fa-star" style="color: rgb(189, 189, 189)"></i>
+              </div>
+              <h5 class="p-name">Lâmpada Filamento LED</h5>
+              <h4 class="p-price">R$50,00</h4>
+              <button class="buy-btn text-uppercase">Compre Agora</button>
+            </div>
+          
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+              <img class="img-fluid mb-3" src="https://m.media-amazon.com/images/I/61yDRiUSheL._AC_SX569_.jpg" alt="" />
+              <div class="stars">
+                <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+                <i class="fas fa-star" style="color: rgb(255, 196, 0) "></i>
+                <i class="fas fa-star" style="color: rgb(255, 196, 0) "></i>
+                <i class="fas fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 196, 0)"></i>
+              </div>
+              <h5 class="p-name">Luminária de Mesa Rosa</h5>
+              <h4 class="p-price">R$22,00</h4>
+              <button class="buy-btn text-uppercase">Compre Agora</button>
+            </div>
+          
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+              <img class="img-fluid mb-3" src="https://m.media-amazon.com/images/I/512gUZjKSrL._AC_SX679_.jpg" alt="" />
+              <div class="stars">
+                <i class="fas fa-star" style="color: rgb(255, 196, 0);"></i>
+                <i class="fas fa-star" style="color: rgb(255, 196, 0) "></i>
+                <i class="fas fa-star" style="color: rgb(255, 196, 0) "></i>
+                <i class="fa-solid fa-star-half-stroke" style="color: #FFD43B;"></i>
+                <i class="fas fa-star" style="color: rgb(189, 189, 189);"></i>
+              </div>
+              <h5 class="p-name">Mini umidificador</h5>
+              <h4 class="p-price">R$82,00</h4>
+              <button class="buy-btn text-uppercase">Compre Agora</button>
+            </div>
+
+            
+            <footer>
+                <div class="container-footer">
+                    <div class="row-footer">
+                        <div class="footer-col">
+                            <h4>Empresa</h4>
+                            <ul>
+                                <li><a href="sobre.html"> Quem somos </a></li>
+                                <li><a href=""> nossos serviços </a></li>
+                                <li><a href=""> política de privacidade </a></li>
+                                <li><a href=""> Endereço</a></li>
+                            </ul>
+                        </div>
+      
+                        <div class="footer-col">
+                            <h4>Obter ajuda</h4>
+                            <ul>
+                                <li><a href="http://localhost/casadinhos/Desktop/FAQ.html">FAQ</a></li>
+                                <li><a href="#">Transporte</a></li>
+                                <li><a href="#">devoluções</a></li>
+                                <li><a href="#">Status De Pedido</a></li>
+                                <li><a href="http://localhost/casadinhos/Desktop/pagamentos.html">Opções De Pagamento</a></li>
+                            </ul>
+                        </div>
+      
+                        <div class="footer-col">
+                            <h4>Loja online</h4>
+                            <ul>
+                                <li><a href="http://localhost/casadinhos/Desktop/categorias/sala/sala.html">Sala</a></li>
+                                <li><a href="http://localhost/casadinhos/Desktop/categorias/cozinha/cozinha.html">Cozinha</a></li>
+                                <li><a href="http://localhost/casadinhos/Desktop/categorias/quarto/quarto.html">Quarto</a></li>
+                                <li><a href="http://localhost/casadinhos/Desktop/categorias/banheiro/banheiro.html">Banheiro</a></li>
+                                <li><a href="http://localhost/casadinhos/Desktop/categorias/lavanderia/lavanderia.html">Lavanderia</a></li>
+                            </ul>
+                        </div>
+      
+                        <div class="footer-col">
+                            <h4>Receba as melhores ofertas</h4>
+                            <div class="form-sub">
+                                <form>
+                                    <input type="email" placeholder="Digite o seu e-mail" required>
+                                    <button>Cadastrar</button>
+                                </form>
+                            </div>
+        
+                            <div class="medias-socias">
+                                <a href="#"> <i class="fa-brands fa-whatsapp"></i> </a>
+                                <a href="#"> <i class="fa-brands fa-instagram"></i> </a>
+                                <a href="#"> <i class="fa-brands fa-tiktok"></i> </a>
+                                <a href="#"> <i class="fa-solid fa-envelope"></i> </a>
+                            </div>
+        
+                        </div>
+                    </div>
+                </div>
+            </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('increment').addEventListener('click', function () {
+            var quantity = document.getElementById('quantity');
+            quantity.value = parseInt(quantity.value) + 1;
+        });
+
+        document.getElementById('decrement').addEventListener('click', function () {
+            var quantity = document.getElementById('quantity');
+            if (quantity.value > 1) {
+                quantity.value = parseInt(quantity.value) - 1;
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .product-list, .order-summary {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-list {
+            width: 65%;
+        }
+
+        .order-summary {
+            width: 30%;
+        }
+
+        h2 {
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+
+        .product {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #ddd;
+            padding: 15px 0;
+        }
+
+        .product:last-child {
+            border-bottom: none;
+        }
+
+        .product img {
+            width: 80px;
+            margin-right: 20px;
+        }
+
+        .product-info {
+            display: flex;
+        }
+
+        .product-details {
+            margin-right: 20px;
+        }
+
+        .product-details h4 {
+            margin: 0;
+        }
+
+        .product-price {
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        .product-actions {
+            display: flex;
+            align-items: center;
+        }
+
+        .product-actions input {
+            width: 30px;
+            text-align: center;
+            margin-right: 10px;
+        }
+
+        .remove-btn {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .order-summary h3 {
+            font-size: 1.2rem;
+            margin-top: 0;
+        }
+
+        .order-summary .summary-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .order-summary .total {
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        .checkout-btn {
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            width: 100%;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .paypal-btn {
+            background-color: #0070ba;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            width: 100%;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .promo-code {
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Product List -->
+    <div class="product-list">
+        <h2>Your Product List</h2>
+        <!-- Product Item 1 -->
+        <div class="product">
+            <div class="product-info">
+                <img src="https://via.placeholder.com/80" alt="Yuqos Neosound Flex">
+                <div class="product-details">
+                    <h4>Yuqos Neosound Flex</h4>
+                    <p>Black Wood<br>Wired<br>Support Google Assistance & Siri</p>
+                </div>
+            </div>
+            <div class="product-actions">
+                <input type="number" value="1" min="1">
+                <button class="remove-btn">X</button>
+                <p class="product-price">$652</p>
+            </div>
+        </div>
+
+        <!-- Product Item 2 -->
+        <div class="product">
+            <div class="product-info">
+                <img src="https://via.placeholder.com/80" alt="Yuqos Splitter Sound">
+                <div class="product-details">
+                    <h4>Yuqos Splitter Sound</h4>
+                    <p>Dark Brown Wood<br>Wireless<br>Support Google Assistance & Siri</p>
+                </div>
+            </div>
+            <div class="product-actions">
+                <input type="number" value="2" min="1">
+                <button class="remove-btn">X</button>
+                <p class="product-price">$1360</p>
+            </div>
+        </div>
+
+        <!-- Product Item 3 -->
+        <div class="product">
+            <div class="product-info">
+                <img src="https://via.placeholder.com/80" alt="Yuqos Roles Defying">
+                <div class="product-details">
+                    <h4>Yuqos Roles Defying</h4>
+                    <p>Black Brown<br>Wireless<br>Not Support Google Assistance & Siri</p>
+                </div>
+            </div>
+            <div class="product-actions">
+                <input type="number" value="1" min="1">
+                <button class="remove-btn">X</button>
+                <p class="product-price">$482</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Order Summary -->
+    <div class="order-summary">
+        <h3>Order Summary</h3>
+        <div class="summary-item">
+            <p>Subtotal</p>
+            <p>$2,467</p>
+        </div>
+        <div class="summary-item">
+            <p>Standard Shipping</p>
+            <p>$120</p>
+        </div>
+        <div class="summary-item">
+            <p>Tax</p>
+            <p>$50</p>
+        </div>
+        <div class="summary-item total">
+            <p>Total</p>
+            <p>$2,617</p>
+        </div>
+
+        <button class="checkout-btn">Checkout</button>
+        <button class="paypal-btn">PayPal</button>
+
+        <input type="text" class="promo-code" placeholder="Enter your promo code">
+    </div>
+</div>
+
+</body>
+</html>
