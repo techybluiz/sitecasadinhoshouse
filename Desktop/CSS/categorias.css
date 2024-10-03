@@ -1,0 +1,408 @@
+body, html {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+.baner {
+  width: 100%;
+  height: 380px;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+  }
+
+h1, h2 , h3{
+    padding: 30px;
+    font-weight: 500;
+    font-style: bold;
+}
+.titulo{
+    color: #a70101;
+    padding: 70px;
+    font-size: 60px;
+    text-align: center;
+}
+.container, .container-fluid  {
+  width: 100%;
+  padding-right: 0px; 
+  padding-left: 0px; 
+  margin-right: auto; 
+  margin-left: auto;
+}
+
+/* Slogan da pagina */
+.navbarslogan {
+    max-width: 100%;
+    background-color: #FF3131;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+.slogan {
+    color: white; 
+    font-weight: 700;
+    font-style: normal;
+    text-align: center;
+}
+
+/* Nav bar - logo */
+.logo {
+    width: 200px; 
+    height: auto;
+}
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 20px;
+    gap: 20px; 
+}
+.nav {
+    display: flex;
+    flex: 1; 
+    justify-content: center; 
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item {
+    margin: 0 10px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+}
+
+.nav-link:hover {
+    color: #FF3131; 
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand {
+    margin-right: 20px; 
+}
+.form-inline {
+    display: flex;
+    align-items: center;
+}
+
+/* Alinhamento da pagina */
+.row {
+    display: flex;
+    align-items: center; 
+    margin-bottom: 0px; 
+    padding-left: 0px;
+}
+
+/* Botão da barra de pesquisa */
+.btn-outline ,.btn-outline-success {
+  color: #fff;
+  background-color: #FF3131;
+  border-color: #FF3131;
+}
+.btn-outline-success:hover {
+  color: #fff;
+  background-color: #FF3131;
+  border-color: #FF3131;
+}
+
+/* Estelização do catalogo de produtos geral */
+
+.catalog-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 0px solid #ddd;
+    border-radius: 10px;
+    margin: 20px;
+    }
+    
+    .catalog-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    }
+    
+    .catalog-item h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    }
+    
+    .catalog-item p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    }
+    
+    .catalog-item button {
+    background-color: #FF3131;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    }
+    
+    .catalog-item button:hover {
+    background-color: #a70101;
+    }
+    
+    .product {
+    cursor: pointer;
+    margin-bottom: 2rem;
+    }
+    
+    .product img {
+    transition: 0.3s all;
+    width: 100%;
+    max-width: 200px; 
+    height: 230px; 
+    object-fit: scale-down;
+    border-radius: 10px
+    }
+    
+    .product:hover img {
+    opacity: 0.7;
+    }
+    .p-price {
+        color: #dc3545;
+    }
+
+    /* Efeito do botão aparecendo de baixo */
+.product .buy-btn {
+    background: var(--main-color);
+    transform: translateY(20px);
+    opacity: 0;
+    margin: 3px;
+    border-radius: 0.3rem;
+    transition: 0.3s all;
+}
+.product:hover .buy-btn {
+    transform: translateY(0px);
+    opacity: 1;
+    color: red;
+}
+
+.product .buy-btn:hover {
+    background-color: var(--main-color-btn-hover);
+}
+
+/* Espaçamento entre as estrelas */
+.stars {
+    padding: 10px 0;
+}
+
+.stars i {
+    font-size: 00.8rem;
+    color: var(--stars-color);
+}
+
+
+.pagination.custom-pagination {
+  display: flex;
+  justify-content: center;
+  padding: 7px;
+  margin: 20px 0;
+  padding-left: 512px;
+  align-items: center;
+}
+
+.pagination.custom-pagination .page-item {
+  margin: 0 4px; /* Ajuste o espaço entre os itens conforme necessário */
+}
+.page-item {
+  margin-left: 0px;
+}
+
+.pagination.custom-pagination .page-link {
+  text-decoration: none;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: #333;
+}
+
+.pagination.custom-pagination .page-link:hover {
+  background-color: #f0f0f0;
+}
+
+/* Opcional: Se você quiser remover os estilos padrão das listas */
+.pagination.custom-pagination {
+  list-style: none;
+}
+
+/* Estelização do carrosel da pagina */
+
+.carousel {
+    width: 100%;
+    max-height: 376px;
+    margin: 0 auto;
+}
+.carousel-item img {
+    width: 100%;
+    height: 376px;
+    object-fit: cover;
+}
+
+/* Imagens redondas categorias */
+.rounded-circle {
+    width: 120px;
+    height: 120px;
+}
+
+.image-circle{
+    display: flex;
+    justify-content: center;
+    gap: 40px; 
+    padding: 50px; 
+}
+
+.image-contanier {
+    text-align: center;
+    flex: 1; 
+}
+.image-title {
+    margin-top: 10px;
+    color: #333;
+    font-size: 16px;
+    text-align: -webkit-center;
+}
+
+  /* Imagens redondas categorias hover */
+  .rounded-circle:hover {
+    width: 120px;
+    height: 120px;
+    border-color: #ad0000; 
+    box-shadow: 0 0 0 1px #ad0000;
+    
+}
+
+.image-circle:hover {
+    display: flex;
+    justify-content: center;
+    gap: 40px; 
+    padding-top: 50px; 
+}
+
+
+/* Footer da pagina */
+footer{
+    background-color: #FF3131;
+    padding: 50px 0;
+    width: 100%;
+  }
+  .container-footer{
+    max-width: 1400px;
+    padding: 0 4%;
+    margin: auto;
+  }
+  .row-footer{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .footer-col{
+    width: 25%;
+    padding: 0 15px;
+  }
+  .footer-col h4{
+    font-size: 22px;
+    color: white;
+    margin-bottom: 20px;
+    font-weight: 500;
+    position: relative;
+    text-transform: uppercase;
+  }
+  .footer-col ul{
+    list-style: none;
+  }
+  .footer-col ul li{
+    margin: 10px 0;
+  }
+  .footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  .footer-col ul li a:hover{
+    color: #cecdcd;
+    padding-left: 10px;
+  }
+  .footer-col .medias-socias{
+    margin-top: 30px;
+  }
+  .footer-col .medias-socias a{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    margin: 0 10px 10px 0;
+    text-decoration: none;
+    border-radius: 50%;
+    color: white;
+    border: 1px solid white;
+    transition: all 0.5s ease;
+  }
+  .footer-col .medias-socias a i{
+    font-size: 20px;
+  }
+  
+  .footer-col .medias-socias a:hover{
+    color: #FF3131;
+    background-color: white;
+  }
+  .footer-col .form-sub input{
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    outline: none;
+    border: 1px solid white;
+    color: white;
+    background-color: #FF3131;
+  }
+  .footer-col .form-sub input::placeholder{
+    color: white;
+  }
+  .footer-col .form-sub button{
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px; 
+    font-size: 17px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: #FF3131;
+    border-radius: 3px;
+    font-weight: bold;
+    background-color: white;        
+  }
+  /* Responsivo */
+  @media (max-width: 800px) {
+    .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+  }
+  @media (max-width:600px) {
+    .footer-col{
+        width: 100%;
+    }
+  }
