@@ -1,0 +1,602 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+html, body {
+  overflow-x: hidden;
+}
+
+.navbarslogan{
+  max-width: 100%;
+  background-color: #FF3131;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.slogan {
+  color: white; 
+  font-weight: 500;
+  font-size: 12px;
+  font-style: normal;
+  text-align: center;
+
+}
+
+.logo {
+  width: 120px;
+  padding: 0px;
+}
+
+header {
+  background-color: #ffffff;
+  padding: 10px 20px;
+  position: relative;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 1001;
+  position: absolute;
+  right: 20px; 
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #FF3131;
+  margin: 3px 0;
+  transition: 0.3s ease;
+}
+
+.nav-list {
+  list-style: none;
+  position: fixed;
+  top: 0;
+  right: -250px; /* para esconder a nav à direita */
+  width: 250px;
+  height: 100%;
+  background: rgb(255,49,49);
+  background: linear-gradient(90deg, rgba(255,49,49,1) 0%, rgba(255,62,62,1) 100%);
+  padding: 60px 0; 
+  transition: right 0.3s ease;
+  z-index: 1000;
+}
+
+.nav-list.active {
+  right: 0; /* Desliza para dentro da tela */
+}
+
+.nav-list li {
+  margin: 0;
+}
+
+.nav-list a {
+  display: block;
+  padding: 15px 20px;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.nav-list i a {
+display: block;
+padding: 5px;
+color: white;
+text-decoration: none;
+transition: background-color 0.3s ease;
+}
+
+.nav-list a:hover {
+  background-color: #ffffff;
+  color: #FF3131;
+}
+
+.iconlist {
+display: inline-flex;
+padding: 0px;
+margin: 0px;
+}
+
+/* Contêiner do carrossel */
+.carousel-container {
+  max-width: 80%; /* Ajuste o valor conforme necessário */
+  margin: 0 auto; /* Centraliza o carrossel */
+}
+
+/* Carrossel */
+.carousel {
+  text-align: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%; /* Garante que o carrossel use a largura do contêiner */
+}
+
+/* Ajuste o tamanho das imagens do carrossel */
+.carousel-inner img {
+  width: 100%;
+  height: auto; /* Mantém a proporção da imagem */
+}
+
+/* Ajuste os controles do carrossel */
+.carousel-control-prev, .carousel-control-next {
+  width: 1%; /* Ajuste o tamanho dos controles conforme necessário */
+}
+
+.w-100 {
+  width: 100% !important;
+  text-align: center;
+  align-items: center;
+}
+
+.containercategorias {
+display: flex;
+overflow-x: auto;
+padding-top: 15px;
+padding: 2%;
+margin-top: 10px;
+scrollbar-width: none; /* Para navegadores Firefox */
+}
+
+.containercategorias::-webkit-scrollbar {
+display: none; /* Para navegadores WebKit e Blink (Chrome, Safari) */
+}
+
+.rounded-circle {
+width: 80px;
+height: 80px;
+margin: 5px;
+margin-left: 15px;
+}
+
+.image-circle {
+display: flex;
+justify-content: center;
+gap: 60px;
+padding: 0px;
+}
+
+.image-contanier {
+text-align: center;
+flex: 1;
+}
+
+.image-title {
+margin-top: 10px;
+color: #333;
+font-size: 12px;
+text-align: -webkit-center;
+}
+
+h5 {
+  padding-top: 8px;
+  font-size: 18px;
+  flex-direction: column;
+}
+
+h4 {
+  padding-top: 25px;
+  padding-left: 10px;
+}
+
+/* Espaçamento entre as estrelas */
+.stars {
+  padding: 10px 0;
+}
+
+.stars i {
+  font-size: 00.8rem;
+  color: var(--stars-color);
+}
+
+
+.catalog-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  border: 0px solid #ddd;
+  border-radius: 10px;
+  margin: 20px;
+  }
+  
+  .catalog-item img {
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  }
+  
+  .catalog-item h2 {
+  font-size: 12px;
+  margin-bottom: 10px;
+  }
+  
+  .catalog-item p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  }
+  
+  .catalog-item button {
+  background-color: #FF3131;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  }
+  
+  .catalog-item button:hover {
+  background-color: #a70101;
+  }
+  
+  .product {
+  cursor: pointer;
+  margin-bottom: 2rem;
+  }
+  
+  .product img {
+  transition: 0.3s all;
+  width: 100%;
+  max-width: 150px; 
+  height: 150px;
+  padding-top: 20px; 
+  object-fit: scale-down;
+  border-radius: 10px
+  }
+  
+  .product:hover img {
+  opacity: 0.7;
+  }
+  .price {
+      color: #dc3545;
+  }
+
+  .btn-info {
+      background-color: #FF3131;
+      border: none;
+      color: #fff;
+      padding: 8px;
+      font-size: 12px;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+      text-align: center;
+      width: 85%;
+  }
+
+  .btn-info:hover {
+      background-color: #FF3131;
+      border: none;
+      color: #fff;
+      padding: 8px;
+      font-size: 12px;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+      text-align: center;
+      width: 85%;
+  }
+
+/* Estelização do parallax da pagina */
+
+section {
+  padding: 48px;
+}
+
+section .content {
+  margin: 0 auto;
+  max-width: 640px;
+}
+
+.content h2 {
+  margin: 0 0 16px;
+  font-size: 18px;
+}
+
+section p {
+  margin: 0;
+}
+
+section p + p {
+  text-indent: 2em;
+}
+
+section + hr {
+  border: 0;
+  border-top: 1px solid #ccc;
+  height: 0;
+}
+
+section .gist {
+  margin: 24px 0;
+}
+
+section .gist .gist-data {
+  border-bottom: 0;
+}
+
+section .gist-meta {
+  display: none;
+}
+
+.bg-holder {
+  width: 100%;
+  height: 80%;
+  background-size: cover;
+  background-position: 50% 50%;
+  color: #fff;
+}
+
+.bg-holder .content {
+  color: #fff;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+#parallaxBanner {
+  background-image: url("https://images.unsplash.com/photo-1599318724821-e1976dd39516?q=80&w=1631&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  width: 100%;
+  height: 30vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top 40px center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-attachment: fixed;
+}
+
+#parallaxBanner h6 {
+  color: rgb(255, 255, 255);
+}
+
+#parallaxBanner h3 {
+  color: rgb(255, 255, 255);
+}
+
+#parallaxBanner button {
+  background-color: var(--main-color);
+  background-color: #ad0000;
+  color: white;
+}
+
+#parallaxBanner button:hover {
+  background-color: var(--main-color-btn-hover);
+}
+
+
+.recommendations {
+  padding: 20px;
+}
+
+.recommendations h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.container-recommendations {
+  display: flex;
+  overflow-x: auto;
+  padding-top: 15px;
+  padding: 2%;
+  margin-top: 10px;
+  scrollbar-width: none; /* Para navegadores Firefox */
+}
+
+
+.product-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  padding: 1em;
+  background-color: #f9f9f9;
+  overflow: hidden;
+  width: 200px;
+  height: 350px; 
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); 
+  border-radius: 5px; 
+}
+
+.product img {
+width: 100%;
+height: 170px; 
+object-fit: contain;
+border-radius: 10px;
+}
+
+
+.product-card img {
+  width: 90%;
+  height: 150px;
+  object-fit: contain;
+  border-bottom: 1px solid #ddd;
+}
+
+.product-card h3 {
+font-size: 14px;
+margin: 10px 0;
+color: #333;
+text-align: center;
+}
+
+.product h5 {
+font-size: 16px; /* Ajuste conforme necessário */
+margin: 10px 0;
+height: 40px; /* Ajuste conforme necessário */
+overflow: hidden;
+}
+
+.product .price {
+font-size: 16px; /* Ajuste conforme necessário */
+color: #e74c3c;
+margin: 10px 0;
+height: 20px; /* Ajuste conforme necessário */
+}
+
+.baner-screen {
+  display: flex;           
+  justify-content: center; 
+  align-items: center;   
+  margin: 0 auto; 
+}
+
+.baner-screen img {
+  max-width: 100%;      
+  height: auto;
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 770px) {
+  .menu-toggle {
+      display: flex;
+  }
+
+  .menu-toggle.active .bar:nth-child(1) {
+      transform: rotate(45deg) translateY(8px);
+  }
+
+  .menu-toggle.active .bar:nth-child(2) {
+      opacity: 0;
+  }
+
+  .menu-toggle.active .bar:nth-child(3) {
+      transform: rotate(-45deg) translateY(-8px);
+  }
+}
+
+/* Footer da pagina */
+footer{
+  background-color: #FF3131;
+  padding: 50px 0;
+  width: 100%;
+}
+.container-footer{
+  max-width: 1400px;
+  padding: 0 4%;
+  margin: auto;
+}
+.row-footer{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-col{
+  width: 25%;
+  padding: 0 15px;
+}
+.footer-col h4{
+  font-size: 22px;
+  color: white;
+  margin-bottom: 20px;
+  font-weight: 500;
+  position: relative;
+  text-transform: uppercase;
+}
+.footer-col ul{
+  list-style: none;
+}
+.footer-col ul li{
+  margin: 10px 0;
+}
+.footer-col ul li a{
+  font-size: 16px;
+  text-transform: capitalize;
+  color: white;
+  text-decoration: none;
+  font-weight: 300;
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+  color: #cecdcd;
+  padding-left: 10px;
+}
+.footer-col .medias-socias{
+  margin-top: 30px;
+}
+.footer-col .medias-socias a{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  margin: 0 10px 10px 0;
+  text-decoration: none;
+  border-radius: 50%;
+  color: white;
+  border: 1px solid white;
+  transition: all 0.5s ease;
+}
+.footer-col .medias-socias a i{
+  font-size: 20px;
+}
+
+.footer-col .medias-socias a:hover{
+  color: #FF3131;
+  background-color: white;
+}
+.footer-col .form-sub input{
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  outline: none;
+  border: 1px solid white;
+  color: white;
+  background-color: #FF3131;
+}
+.footer-col .form-sub input::placeholder{
+  color: white;
+}
+.footer-col .form-sub button{
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px; 
+  font-size: 17px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  color: #FF3131;
+  border-radius: 3px;
+  font-weight: bold;
+  background-color: white;        
+}
+/* Responsivo */
+@media (max-width: 800px) {
+  .footer-col{
+      width: 50%;
+      margin-bottom: 30px;
+  }
+}
+@media (max-width:600px) {
+  .footer-col{
+      width: 100%;
+  }
+}
