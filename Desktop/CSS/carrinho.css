@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body, html {
     font-family: "Poppins", sans-serif;
     margin: 0;
@@ -352,4 +353,360 @@ footer{
     .footer-col{
         width: 100%;
     }
+=======
+body, html {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+.navbarslogan {
+    max-width: 100%;
+    background-color: #FF3131;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+.slogan {
+    color: white; 
+    font-weight: 700;
+    font-style: normal;
+    text-align: center;
+}
+.logo {
+    width: 200px; 
+    height: auto;
+}
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 20px;
+    gap: 20px; 
+}
+.nav {
+    display: flex;
+    flex: 1; 
+    justify-content: center; 
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item {
+    margin: 0 10px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+}
+
+.nav-link:hover {
+    color: #FF3131; 
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand {
+    margin-right: 20px; 
+}
+.form-inline {
+    display: flex;
+    align-items: center;
+}
+.container {
+    margin: 0 auto;
+    padding: 0px;
+}
+.cart {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.cart-table {
+    width: 70%;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+table th, table td {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+table th {
+    background-color: #f0f0f0;
+}
+.cart-summary {
+    width: 25%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+}
+.cart-summary h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+.cart-summary p {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+.cart-summary .total {
+    font-size: 18px;
+    font-weight: bold;
+}
+.checkout-btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.checkout-btn:hover {
+    color: white;
+    background-color: #FF3131;
+}
+.add {
+    margin: 0px;
+    border: 0px;
+}
+.btn-outline-success {
+    color: #FF3131;
+    border-color: #FF3131;
+}
+.btn-danger {
+    background-color: #ffffff;
+    border: #ffffff;
+    color: #FF3131;
+}
+.btn-danger:hover {
+    background-color: #ffffff;
+    border: #ffffff;
+    color: #FF3131;
+}
+
+
+/* Estelização do catalogo de produtos geral */
+
+.catalog-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 0px solid #ddd;
+    border-radius: 10px;
+    margin: 20px;
+    }
+    
+    .catalog-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    }
+
+    .h2, h2 {
+        font-size: 2rem;
+        padding: 15px;
+    }
+    
+    .catalog-item h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    }
+    
+    .catalog-item p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    }
+    
+    .catalog-item button {
+    background-color: #FF3131;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    }
+    
+    .catalog-item button:hover {
+    background-color: #a70101;
+    }
+    
+    .product {
+    cursor: pointer;
+    margin-bottom: 2rem;
+    }
+    
+    .product img {
+    transition: 0.3s all;
+    width: 100%;
+    max-width: 200px; 
+    height: 230px; 
+    object-fit: scale-down;
+    border-radius: 10px
+    }
+    
+    .product:hover img {
+    opacity: 0.7;
+    }
+    .p-price {
+        color: #dc3545;
+    }
+
+        /* Efeito do botão aparecendo de baixo */
+        .product .buy-btn {
+            background: var(--main-color);
+            transform: translateY(20px);
+            opacity: 0;
+            border-radius: 0.3rem;
+            transition: 0.3s all;
+        }
+        .product:hover .buy-btn {
+            transform: translateY(0px);
+            opacity: 1;
+            color: red;
+        }
+
+        .product .buy-btn:hover {
+            background-color: var(--main-color-btn-hover);
+        }
+
+        /* Espaçamento entre as estrelas */
+        .stars {
+            padding: 10px 0;
+        }
+
+        .stars i {
+            font-size: 00.8rem;
+            color: var(--stars-color);
+        }
+
+
+/* Footer da pagina */
+footer{
+    background-color: #FF3131;
+    padding: 50px 0;
+    width: 100%;
+  }
+  .container-footer{
+    max-width: 1400px;
+    padding: 0 4%;
+    margin: auto;
+  }
+  .row-footer{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .footer-col{
+    width: 25%;
+    padding: 0 15px;
+  }
+  .footer-col h4{
+    font-size: 22px;
+    color: white;
+    margin-bottom: 20px;
+    font-weight: 500;
+    position: relative;
+    text-transform: uppercase;
+  }
+  .footer-col ul{
+    list-style: none;
+  }
+  .footer-col ul li{
+    margin: 10px 0;
+  }
+  .footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  .footer-col ul li a:hover{
+    color: #cecdcd;
+    padding-left: 10px;
+  }
+  .footer-col .medias-socias{
+    margin-top: 30px;
+  }
+  .footer-col .medias-socias a{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    margin: 0 10px 10px 0;
+    text-decoration: none;
+    border-radius: 50%;
+    color: white;
+    border: 1px solid white;
+    transition: all 0.5s ease;
+  }
+  .footer-col .medias-socias a i{
+    font-size: 20px;
+  }
+  
+  .footer-col .medias-socias a:hover{
+    color: #FF3131;
+    background-color: white;
+  }
+  .footer-col .form-sub input{
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    outline: none;
+    border: 1px solid white;
+    color: white;
+    background-color: #FF3131;
+  }
+  .footer-col .form-sub input::placeholder{
+    color: white;
+  }
+  .footer-col .form-sub button{
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px; 
+    font-size: 17px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: #FF3131;
+    border-radius: 3px;
+    font-weight: bold;
+    background-color: white;        
+  }
+  
+  
+  @media (max-width: 800px) {
+    .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+  }
+  @media (max-width:600px) {
+    .footer-col{
+        width: 100%;
+    }
+>>>>>>> 4352f3d69cebc8aaf5bc524cb1c870181f3daa46
   }
